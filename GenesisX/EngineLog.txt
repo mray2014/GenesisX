@@ -1,0 +1,223 @@
+===Version 1.0===3/1/17
+-The start of an Open GL engine
+-Created Window
+
+===Version 1.1===3/1/17
+-Draws vertices to the screen
+
+===Version 2.0===3/1/17
+-Added new clases:
+ ~ Camera.h
+ ~ Engine.h
+ ~ Game.h
+ ~ GameEntity.h
+ ~ Mesh.h
+ ~ Object.h
+ ~ Renderer.h
+ ~ Timer.h
+ ~ Vertex.h
+-Moved vertices to a Mesh class that is held by the Game Entity class
+-Added a Vertex class that holds a struct of how the data of my vertices will be arranged
+-Added in-game timer, delta time, and etc
+-Added necessary methods for transformations, scale, and rotation inside Game Enity class
+(NOTE: Can't implement them though because I don't know how to use openGL's math library ;-;
+Also I need to get my vertex and pixel shader up and running before I can even use them anyways)
+
+===Version 2.5===3/5/17
+-Added dynamic rendering for my game objects
+(Basically they automatically add them selves to the render to be rendered on their own)
+
+===Version 3.0===3/13/17
+-Moved Basic window creation and game loop to the engine class
+-Added Shader Manager Class
+-Finally got Verter Shader and Pixel Shader implemented and working
+
+===Version 3.3===3/15/17
+-Modified the vertex shader to accept a struct of vertex information coming in
+-Added more information to my vertex (uv's, normals, color)
+-Added mouse and keyboard input
+
+===Version 4.0=== 3/22/17
+-Added movable camera that moves and rotates
+-Added input to move up, down, left, right, foward, backward
+-Added sprinting with LEFT SHIFT
+-Added 3-D cube mesh to view in the engine
+-Added cycling colors that change over time
+
+===Version 4.3=== 3/24/17
+-Added model loading
+-Added teapot model obj to engine
+-Added my own hand made model of the ray gun
+
+===Version 4.6=== 3/26/17
+-Finally got textures to work on game objects
+-Moved texturing loading to mesh class
+-Shaders can sort between objects that have textures and no textures
+-Fixed Scaling bug not working right
+
+===Version 4.9=== 3/26/17
+-Added lights to game engine
+-Added a light class
+	~light class automatically creates a gameobject sphere at the light source position
+	to visually see where the light source is at
+	~light tags the game object as "light"
+	~In renderer, i can sort through tags to find light sources and turn on line only rendering
+	then turn it off when it is not needed anymore
+-Revamped my vertex and pixel/fragment shader to output and input structs of information between the shaders
+-Added Ambience
+-Added Specular
+=Bugs=
+-Lighting isn't fully working, it doing something but not what I want. It almost looks correct
+but i'm pretty sure its how i'm calculating the normals
+
+===Version 4.99=== 3/26/17
+-Restructed Game Objects to have Transform structs
+-Added Ridgid Body structs to Game Objects that hold:
+	~Velocity, Acceleration, Friction, and Mass
+-Added methods to apply forces to the Game Object and move it accordingly taking in account friction
+-Added a method that applys a gravity force on Game Objects
+-Added button controls to switch on and off gravity force and applying a force to the ray gun object
+	~(G) turns on and off gravity
+	~(N) applies a force to the ray gun object in the positive x direction
+=Bugs=
+-Lighting still don't work right ;-;
+
+===Version 5.0=== 3/29/17
+-FINALLY GOT LIGHTS WORKING
+	~Apperently my normals weren't getting loaded in right
+	~Had to re-write my code to take in indices for positions, uv's, and normals
+-Fixed fragment shader to display lighting correctly
+-Lights and game objects now have a radius based on the farthest vertice from it's origin
+-Using the lights radius I can now calculate if a vertice is in range of the light source so it can be rendered
+-The distance an object is away from the light source effects the light intensity on the object, it fades in and 
+out pretty well
+-Meshes now hold specular data
+-Light sources now hold ambience data
+-Added InputManager Class, moved all input code to approprate spots
+-Left, Right, Up, and Down keys move the ray gun model left, right, foward, and backwards using forces
+
+===Version 5.1=== 3/31/17
+-Ok NOW I actually fixed lights in the engine(normal calculations were messed up)
+-Can now swap between different ambiences of light
+
+===Version 5.5=== 4/11/17
+-Added SkyBoxes 
+-Added TONS of Skyboxes
+-Can swap between Sky Boxes at will with TAB
+-Optimized, draws the Sky Box last after everything else is done rendering
+
+===Version 5.7=== 4/21/17
+-Added object parenting, child moves with parent object
+-Fixed Lighting calculations
+-Changed light values
+-Getting ready to implement Deffered Rendering
+
+===Version 5.9=== 4/24/17
+-First implementation of deferred rendering
+-Added new shaders to handle deffered rendering
+-Added new render target called g_Buffer that holds:
+	~The color texture
+	~The normal texture
+	~The frag position texture
+-Fixed sky box rendering with deferred rendering, still gets rendered at the end
+=Bugs=
+-Having a hard time go about lighting certain pixels if they are being hit by a light
+-As of now it only outputs regular textures with no lighting
+
+===Version 6.0=== 5/03/17
+-FINALLY DONE WITH THIS SHIT
+-Deferred rendering implemented
+-Code is pretty shitty right now, need to clean up
+-g_Buffer holds:
+	~The color texture
+	~The normal texture
+	~The frag position texture
+	~The final texture
+-Almost used a stencil buffer, developed my own approach
+-Modified Shaders to handle different graphics cards and not break
+
+===Version 6.5=== 5/04/17
+-Restructed my engine so that information isn't all over the place
+-Added lists of lights to render in the Renderer class
+-Lights now push themselves to the light list in the Renderer class on their own
+-Added a move method to lights
+-Added functionality to render lights sphere radius at will
+-Added multiples lights to the scene for testing(it works :D)
+-Added a default wall model to test lighting
+-Moving lights in a circle like motion, testing the Move function (that also works :DD)
+-Cleaned up code and now ready to move foward
+
+===Version 7.0=== 5/05/17
+-Improved obj model loading
+-Can now loading in objects with multiple meshes
+-Can now load mtl files and use them properly
+-restructured renderer to render multiple meshes in an object
+
+===Version 7.3=== 5/07/17
+-Added a bullet class
+-Created methods to shoot a bullet in the game loop
+-Bullets shoot in the direction the camera is facing
+-Added foward directions to the camera and game objects
+-Bullets hold a light to them and lights move with bullets
+-Revamped collider calculations
+-Now gathers farthest x, y, z vertices to create the bounding box and sphere radius
+-Added object sphere collision
+-Added object box collision
+-Added object sphere on box collision
+-On collision bullets stay in place and become objects that can be colllided with
+-Changed vertex information, moved the color of the mesh from the vertex to the mesh class
+
+==Bugs==
+-If I try and remove the lights on the bullets from the renderer it screams at me (fixed)
+-If I try to remove the object of the bullet from the render it screams at me (fixed)
+-Ending the game throws a error apperently(need to look into this) UPDATE(Apperently deleting the bullets I pushed to the game object vector is causing it) (fixed)
+-Collison detection is still kind of wonky
+-Not sure if sphere on box collision is working correctly
+-FPS drops frames for a slight second everytime you shoot a bullet
+-Also I cannot tell if i'm leaking memory or not >:/
+
+===Version 7.8=== 5/08/17
+-Fixed removing lights screaming at me
+-Fixed removing bullet objects screaming at me
+-Fixed ending the game screaming at me
+-Fixed FPS dropping for a slight second everytime you shoot
+-Added storing all my Meshes in a dictionary that is a static object in my engine
+-Now can call upon preloaded Meshes to create game objects anywhere in my code
+-Bullets can now either delete themselves when they collide with something or stick and in place
+-Finally done with DSA1 course lol
+
+==Bugs==
+-Collison detection is still kind of wonky
+-Not sure if sphere on box collision is working correctly
+-Also I cannot tell if i'm leaking memory or not >:/
+
+===Version 8.0=== 5/08/17
+-Added Ray Gun rotation with the camera
+-Added Offset for the bullets to shoot from the ray gun tip
+-Added rapid fire shooting
+-Added package to check for memory leaks
+-A SHIT TON OF MEMORY LEAKS APPERENTLY
+-Fixed 95% of the memory leaks(UPDATE: FINALLY FIXED ALL THE DAM LEAKS...144 leaks to 0...)
+-Added foward declaration
+-Added smart pointers(kind of...)
+-Added AABB/Sphere/BoxSphere Collision(kind of works)
+-Added skin variable which is a float that basically starts collision early
+-Bullets can now collide with the floor
+-Added player class that can collide with ground
+-Jumping acts like a jet pack
+-Turned on gravity and friction for player only
+
+==Bugs==
+-Collision detection is still wonky
+
+===Version 8.3=== 6/01/17
+-Fixed collision detection
+-Fixed up coded
+
+===Version 8.6=== 6/15/17
+-Added HDR
+-Forgot to add updates for this so i can't rmember ;-;
+
+===Version 9.0=== 7/01/17
+-Added Bloom
+-Fixed velocity/friction calculations

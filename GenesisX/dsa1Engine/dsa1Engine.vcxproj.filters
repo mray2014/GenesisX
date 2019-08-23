@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{02a5a84f-2327-498b-8a26-2e84e7b50625}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\DeferredShading">
+      <UniqueIdentifier>{08cb0bff-5d96-4224-82fb-624f28ccda58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\InstanceShading">
+      <UniqueIdentifier>{96901662-eeb1-46c6-9c49-4a22628c494d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\RegularShading">
+      <UniqueIdentifier>{708b2d1d-685d-4864-8896-9a3b3026441b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\SkyBoxShading">
+      <UniqueIdentifier>{995684ef-8a44-42ff-816c-6891162b8243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\HDRShading">
+      <UniqueIdentifier>{f7fa4bcd-0a94-4412-b208-b68989534335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\BloomShading">
+      <UniqueIdentifier>{7e67f91b-fba1-4258-b532-dd628152fc89}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VertInd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RidgidBody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\DeferredShading\ambientPShader.glsl">
+      <Filter>Shaders\DeferredShading</Filter>
+    </None>
+    <None Include="shaders\DeferredShading\ambientVShader.glsl">
+      <Filter>Shaders\DeferredShading</Filter>
+    </None>
+    <None Include="shaders\DeferredShading\geometryPShader.glsl">
+      <Filter>Shaders\DeferredShading</Filter>
+    </None>
+    <None Include="shaders\DeferredShading\geometryVShader.glsl">
+      <Filter>Shaders\DeferredShading</Filter>
+    </None>
+    <None Include="shaders\DeferredShading\lightPShader.glsl">
+      <Filter>Shaders\DeferredShading</Filter>
+    </None>
+    <None Include="shaders\DeferredShading\lightVShader.glsl">
+      <Filter>Shaders\DeferredShading</Filter>
+    </None>
+    <None Include="shaders\InstanceShading\instancePShader.glsl">
+      <Filter>Shaders\InstanceShading</Filter>
+    </None>
+    <None Include="shaders\InstanceShading\instanceVShader.glsl">
+      <Filter>Shaders\InstanceShading</Filter>
+    </None>
+    <None Include="shaders\RegularShading\fShader.glsl">
+      <Filter>Shaders\RegularShading</Filter>
+    </None>
+    <None Include="shaders\RegularShading\vShader.glsl">
+      <Filter>Shaders\RegularShading</Filter>
+    </None>
+    <None Include="shaders\SkyBoxShading\skyBoxPShader.glsl">
+      <Filter>Shaders\SkyBoxShading</Filter>
+    </None>
+    <None Include="shaders\SkyBoxShading\skyBoxVShader.glsl">
+      <Filter>Shaders\SkyBoxShading</Filter>
+    </None>
+    <None Include="shaders\DeferredShading\nullP.glsl">
+      <Filter>Shaders\DeferredShading</Filter>
+    </None>
+    <None Include="shaders\DeferredShading\nullV.glsl">
+      <Filter>Shaders\DeferredShading</Filter>
+    </None>
+    <None Include="packages.config" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="shaders\HDRShading\HDRPShader.glsl">
+      <Filter>Shaders\HDRShading</Filter>
+    </None>
+    <None Include="shaders\HDRShading\HDRVShader.glsl">
+      <Filter>Shaders\HDRShading</Filter>
+    </None>
+    <None Include="shaders\BloomShading\BlurPShader.glsl">
+      <Filter>Shaders\BloomShading</Filter>
+    </None>
+    <None Include="shaders\BloomShading\BlurVShader.glsl">
+      <Filter>Shaders\BloomShading</Filter>
+    </None>
+    <None Include="shaders\BloomShading\BrightnessPShader.glsl">
+      <Filter>Shaders\BloomShading</Filter>
+    </None>
+    <None Include="shaders\BloomShading\BrightnessVShader.glsl">
+      <Filter>Shaders\BloomShading</Filter>
+    </None>
+  </ItemGroup>
+</Project>
