@@ -26,13 +26,6 @@ My goals for this project was:
 - Whats interesting about this project is that around this time I started learning about hardware and optimizations
 - This engine put to test some architectures I thought of so structure the engine where most of the data was cache friendly optimized efficiently
 
-
-### [**GenesisX**](https://github.com/mray2014/GenesisX)
-- My second game engine I have created and it is honestly the one engine I most proud of
-- After researching for weeks I finally implemented Deferred rendering into the engine, the hard work paid off
-- Once I got that feature in I started steam rolling new graphical features in easily like HDR and Bloom because of all the knowledge I gained from Deferred Rendering
-
-
 ### [**Enginerino**](https://github.com/mray2014/Enginerino)
 - My first game engine I ever created that I hold near and dear to my heart, even though it's not very good haha
 - Implemented instance rendering for primitive models
